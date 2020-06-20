@@ -4,7 +4,11 @@ using System.Text;
 
 namespace ConnOe.Data.Models
 {
-    class ProductInventorySnapshot
+    public class ProductInventorySnapshot
     {
+        public int Id { get; set; }
+        public DateTime SnapshotTime { get; set; }
+        public int QuantityOnHand { get; set; }
+        public Product Product { get; set; }
     }
 }
