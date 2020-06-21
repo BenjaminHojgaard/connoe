@@ -3,15 +3,17 @@ using System;
 using ConnOe.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace ConnOe.Data.Migrations
 {
     [DbContext(typeof(ConnoeDbContext))]
-    partial class ConnoeDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200621114502_products")]
+    partial class products
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
