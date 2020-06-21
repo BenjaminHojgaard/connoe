@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConnOe.Web.Serialization
 {
-    public class ProductMapper
+    public static class ProductMapper
     {
         public static ProductModel SerializeProductModel(Data.Models.Product product)
         {
