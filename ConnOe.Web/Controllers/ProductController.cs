@@ -29,5 +29,13 @@ namespace ConnOe.Web.Controllers
             var productViewModels = products.Select(ProductMapper.SerializeProductModel);
             return Ok(productViewModels);
         }
+
+        [HttpPatch("/api/products/{id}")]
+        public ActionResult ArchiveProduct(int id)
+        {
+            _logger.LogInformation("Archiving product.");
+            var archiveResult = _productService.ArchiveProduct(id);
+            return Ok(archiveResult);
+        }
     }
 }
